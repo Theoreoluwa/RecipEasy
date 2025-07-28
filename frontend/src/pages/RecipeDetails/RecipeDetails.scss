@@ -1,0 +1,239 @@
+@import "~aos/dist/aos.css";
+
+.recipe-page {
+  padding: 2rem 1rem;
+
+  .main-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .actions {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    
+      .icon-btn {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+    
+        &.edit-btn {
+          color: #2980b9;
+    
+          &:hover {
+            color: #1c5980;
+            transform: scale(1.1);
+          }
+        }
+    
+        &.delete-btn {
+          color: #e74c3c;
+    
+          &:hover {
+            color: #c0392b;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+
+      .rating,
+      .reviews,
+      .save {
+        color: #555;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      .star {
+        color: #f39c12;
+        margin-left: 4px;
+      }
+
+      .divider {
+        height: 20px;
+        width: 1px;
+        background: #ccc;
+      }
+
+      .save {
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #d54215;
+        }
+      }
+    }
+
+    .author {
+      margin-top: 1rem;
+      font-size: 1rem;
+
+      span {
+        color: #d54215;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .recipe-body {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left-panel {
+    flex: 1;
+    max-width: 600px;
+
+    .image-card,
+    .info-card,
+    .card-section {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      background-color: #fff;
+
+      img {
+        height: 350px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .card-body {
+        padding: 1.5rem;
+
+        h3 {
+          color: #2c3e50;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        h4 {
+          margin-top: 1rem;
+          font-size: 1.1rem;
+          color: #d54215;
+        }
+
+        p {
+          color: #444;
+          display: flex;
+          align-items: center;
+          margin: 0.5rem 0;
+        }
+
+        .circle-icon {
+          font-size: 8px;
+          color: #e7ab46;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .info-card .card-body {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+
+      .info-item {
+        h5 {
+          font-size: 1rem;
+          color: #114388;
+        }
+
+        p {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .right-panel {
+    flex: 1;
+    max-width: 600px;
+
+    .note-card {
+      border: none;
+      border-radius: 12px;
+      background: #f9f9f9;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+      .card-body {
+        padding: 1.5rem;
+
+        .note-header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          img {
+            width: 40px;
+            margin-right: 10px;
+          }
+
+          h3 {
+            font-size: 1.4rem;
+            color: #114388;
+            margin: 0;
+          }
+        }
+
+        p {
+          color: #333;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+// Show more/less styling
+.show-more-btn {
+  background-color: transparent;
+  border: none;
+  color: #d54215;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #a92f0b;
+    text-decoration: underline;
+  }
+}
+
+.short-note {
+  max-height: 120px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.full-note {
+  max-height: none;
+}
